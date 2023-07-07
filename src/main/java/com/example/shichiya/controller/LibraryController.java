@@ -59,7 +59,7 @@ public class LibraryController {
     @CrossOrigin
     @PostMapping("api/covers")
     public String coversUpload(MultipartFile file) throws Exception {
-        String folder = "F:/workspace/img";
+        String folder = "/Users/shichiya/workSpace/lib-system-file/book-cover";
         File imageFolder = new File(folder);
         File f = new File(imageFolder, StringUtils.getRandomString(6) + file.getOriginalFilename()
                 .substring(file.getOriginalFilename().length() - 4));
@@ -78,7 +78,7 @@ public class LibraryController {
     @CrossOrigin
     @PostMapping("api/file")
     public String fileUpload(MultipartFile file) throws Exception {
-        String folder = "F:/workspace/file";
+        String folder = "/Users/shichiya/workSpace/lib-system-file/book-file";
         File fileFolder = new File(folder);
         File f = new File(fileFolder, StringUtils.getRandomString(6) + file.getOriginalFilename()
                 .substring(file.getOriginalFilename().length() - 4));
